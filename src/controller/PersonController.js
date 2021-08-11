@@ -1,6 +1,6 @@
 const dataBase = require('../models');
 
-class Person{
+class PersonController{
     static async getAll(req, res){
         try {
             const allPersons = await dataBase.Person.findAll();
@@ -10,3 +10,5 @@ class Person{
         }
     }
 }
+
+module.exports = PersonController;
