@@ -1,9 +1,11 @@
 const express = require('express');
-const routes = require('./router');
+const routes = require('./routes');
 
 const app = express();
 const port = 3000;
 
 routes(app);
 
-app.listen(port, ()=> console.log(`Servidor funcionando na porta ${port}`))
+app.listen(port, ()=> console.log(`Servidor funcionando na porta ${port}`));
+
+module.exports = app;
